@@ -1,0 +1,20 @@
+on: push
+
+env:
+  clientId: d4afd69a-2e12-4514-82e2-a23a4e376333
+  tenant: b2creactspike.onmicrosoft.com
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: 'Upload TrustFrameworkBase Policy'
+      uses: azure-ad-b2c/deploy-trustframework-policy@v3
+      with:
+        folder: "./policies"
+        files: "TrustFrameworkBase.xml,TrustFrameworkLocalization.xml,TrustFrameworkExtensions.xml,SignUpOrSignin.xml"
+        tenant: ${{ env.tenant }}
+        clientId: ${{ env.clientId }}
+        clientSecret: ${{ secrets.clientSecret }}
