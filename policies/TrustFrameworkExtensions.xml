@@ -4,12 +4,12 @@
   xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
   xmlns="http://schemas.microsoft.com/online/cpim/schemas/2013/06" 
   PolicySchemaVersion="0.3.0.0" 
-  TenantId="yourtenant.onmicrosoft.com" 
+  TenantId="b2creactspike.onmicrosoft.com" 
   PolicyId="B2C_1A_TrustFrameworkExtensions" 
-  PublicPolicyUri="http://yourtenant.onmicrosoft.com/B2C_1A_TrustFrameworkExtensions">
+  PublicPolicyUri="http://b2creactspike.onmicrosoft.com/B2C_1A_TrustFrameworkExtensions">
   
   <BasePolicy>
-    <TenantId>yourtenant.onmicrosoft.com</TenantId>
+    <TenantId>b2creactspike.onmicrosoft.com</TenantId>
     <PolicyId>B2C_1A_TrustFrameworkLocalization</PolicyId>
   </BasePolicy>
   <BuildingBlocks>
@@ -24,12 +24,12 @@
       <TechnicalProfiles>
          <TechnicalProfile Id="login-NonInteractive">
           <Metadata>
-            <Item Key="client_id">ProxyIdentityExperienceFrameworkAppId</Item>
-            <Item Key="IdTokenAudience">IdentityExperienceFrameworkAppId</Item>
+            <Item Key="client_id">e55415d1-2df1-4217-b20b-381f68dd6eac</Item>
+            <Item Key="IdTokenAudience">abf2c9c1-a566-4af0-b0c7-4c19b1d8a085</Item>
           </Metadata>
           <InputClaims>
-            <InputClaim ClaimTypeReferenceId="client_id" DefaultValue="ProxyIdentityExperienceFrameworkAppId" />
-            <InputClaim ClaimTypeReferenceId="resource_id" PartnerClaimType="resource" DefaultValue="IdentityExperienceFrameworkAppId" />
+            <InputClaim ClaimTypeReferenceId="client_id" DefaultValue="e55415d1-2df1-4217-b20b-381f68dd6eac" />
+            <InputClaim ClaimTypeReferenceId="resource_id" PartnerClaimType="resource" DefaultValue="abf2c9c1-a566-4af0-b0c7-4c19b1d8a085" />
           </InputClaims>
         </TechnicalProfile>
       </TechnicalProfiles>
